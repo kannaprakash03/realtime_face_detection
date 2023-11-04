@@ -29,7 +29,7 @@ def detect(image):
 def main():
     st.title("Face Detection App")
 
-    st.sidebar.write("**These are the functions by the our application : ** ")
+    st.sidebar.write("These are the functions by the our application :")
 
     activities = ["Face detection in pic", "Face detection cam"]
     choice = st.sidebar.selectbox("select an option", activities)
