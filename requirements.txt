@@ -1,0 +1,4 @@
+streamlit
+opencv-python
+opencv-contrib-python-headless
+streamlit-webcam-example==0.1.0
