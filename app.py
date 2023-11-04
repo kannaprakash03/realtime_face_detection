@@ -28,34 +28,11 @@ def detect(image):
 # Here is the function for UI
 def main():
     st.title("Face Detection App")
-    st.write("**Using the Haar cascade Classifiers**")
-    st.write("--Use operations in the side bar")
 
-    st.sidebar.write("")
-    st.sidebar.write("")
-    st.sidebar.write("")
     st.sidebar.write("**These are the functions by the our application : ** ")
-    st.sidebar.write("")
 
-    activities = ["Home", "Upload and display pic",
-                  "Face detection in pic", "Face detection cam"]
+    activities = ["Face detection in pic", "Face detection cam"]
     choice = st.sidebar.selectbox("select an option", activities)
-
-    if choice == "Home":
-        image = Image.open('DP.png')
-        image = image.resize((400, 400))
-        st.image(image, caption='an application by Gunashekar.CH')
-
-    if choice == "Upload and display pic":
-        image_file = st.file_uploader(
-            "Upload image", type=['jpeg', 'png', 'jpg', 'webp'])
-
-        if image_file is not None:
-
-            image = Image.open(image_file)
-            if st.button("Process"):
-               # image = image.resize((500,500))
-                st.image(image, use_column_width="auto")
 
     if choice == "Face detection in pic":
         image_file = st.file_uploader(
