@@ -31,7 +31,7 @@ def main():
 
     st.sidebar.write("These are the functions by the our application :")
 
-    activities = ["Face detection in pic", "Face detection cam"]
+    activities = ["Face detection in pic"]
     choice = st.sidebar.selectbox("select an option", activities)
 
     if choice == "Face detection in pic":
