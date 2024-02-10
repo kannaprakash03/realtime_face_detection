@@ -51,23 +51,6 @@ def main():
                 st.image(result_img, use_column_width=True)
                 st.success("Found {} faces\n".format(len(result_faces)))
 
-    if choice == "Face detection cam":
-
-        st.header("Webcam Live Feed")
-        run = st.checkbox('Run')
-        FRAME_WINDOW = st.image([])
-        camera = cv2.VideoCapture(0)
-        while run:
-            # Reading image from video stream
-            _, img = camera.read()
-            # Call method we defined above
-            img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-            img, a = detect(img)
-           # st.image(img, use_column_width=True)
-            FRAME_WINDOW.image(img)
-        else:
-            st.write('Stopped')
-
 
 if __name__ == "__main__":
     main()
